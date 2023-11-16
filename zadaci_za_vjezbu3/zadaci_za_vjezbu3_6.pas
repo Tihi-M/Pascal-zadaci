@@ -23,7 +23,7 @@ begin
     j:=1;
     while i <= dimenzijaTablice do
       begin
-        write(i,' | ');
+        write(i,' |');
         while j <= dimenzijaTablice do
           begin
           if (i*j) < 10 then

@@ -8,7 +8,11 @@ begin
     //stampanje zaglavlja
     while k <= dimenzijaTablice do
       begin
+        if k >= 10 then
+        write(' ',k)
+        else
         write('  ',k);
+
         k := k+1;
       end;
     WriteLn();
@@ -23,7 +27,10 @@ begin
     j:=1;
     while i <= dimenzijaTablice do
       begin
-        write(i,' | ');
+        if i>=10 then
+        write(i,'|')
+        else
+        write(i,' |');
         while j <= dimenzijaTablice do
           begin
           if (i*j) < 10 then

@@ -44,5 +44,5 @@ begin
 end;
 
 begin
-    checkFirstN(10000);
+    checkFirstN(5000);
 end.

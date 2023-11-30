@@ -9,7 +9,7 @@ begin
           if (j <= n+i) and (j>n-i)  then
             write(' ')
             else
-            write('#');
+            write('*');
           end; 
           if( i <> n)then
           WriteLn();
@@ -22,10 +22,8 @@ begin
           if (j > n-i) and (j <= n+i) then
             write(' ')
             else
-            write('#');
+            write('*');
         end;
         WriteLn();
     end;
-
-
 end.

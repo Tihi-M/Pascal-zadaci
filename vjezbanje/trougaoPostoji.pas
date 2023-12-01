@@ -13,7 +13,7 @@ begin
     ReadLn(b1,b2);
     readln(c1,c2);
     if postojiTrougao(a1,a2,b1,b2,c1,c2) then
-      writeln('Postoji')
-      else
-      writeln('Ne postoji');
+    writeln('Trougao postoji')
+    else
+    WriteLn('Trougao ne postoji');
 end.

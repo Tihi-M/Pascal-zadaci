@@ -1,7 +1,7 @@
-program Nizovi13;
+program Nizovi16;
 
 var niz:array of integer;
-duzina,a:integer;
+duzina:integer;
 
 procedure printArr(var arr:array of integer;length:integer);
 var i:integer;
@@ -19,25 +19,23 @@ begin
     end;
 end;
 
-function brParnih(num:integer):integer;
+function najCifra(num:integer):integer;
 begin
-  brParnih:=0;
-  while num > 0 do
-  begin
-    if((num mod 10)mod 2 = 0) then
-      brParnih:=brParnih+1;
-    num := num div 10;
-  end;
+    najCifra := -10;
+    num:=Abs(num);
+    while num > 0 do
+      begin
+        if(num mod 10 > najCifra) then
+        najCifra := num mod 10;
+        num := num div 10;  
+        end;
 end;
 
-procedure parniBrojevi(var arr:array of integer;length,n:integer);
+procedure updateArray(var arr:array of integer;length:integer);
 var i:integer;
 begin
   for i:=0 to length-1 do
-    begin
-      if(brParnih(arr[i]) >= n)then
-        WriteLn(arr[i],' ');
-    end;
+    arr[i] := najCifra(arr[i]);
 end;
 
 begin
@@ -46,7 +44,6 @@ begin
     SetLength(niz,duzina);
     writeln('Elementi niza:');
     takeInput(niz,duzina);
-    writeln('Min jedinica:');
-    ReadLn(a);
-    parniBrojevi(niz,duzina,a);
+    updateArray(niz,duzina);
+    printArr(niz,duzina);
 end.

@@ -66,11 +66,7 @@ begin
     writeln();
     end;
 end;
-function proizvodVrsteKolone(var matrica1,matrica2:matrix;length:integer):integer;
-var i,j,element:integer;
-begin
-  
-end;
+
 procedure proizvodMatrica(var matrica1,matrica2:matrix;length:integer);
 var i,j,z,element:integer;
 begin

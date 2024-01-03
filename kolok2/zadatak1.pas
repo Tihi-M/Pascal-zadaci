@@ -8,7 +8,7 @@ begin
     strLength:=strLength+1;
 end;
 function areEqual(var str1,str2:array of char;length:integer):boolean;
-var i:integer;
+var i:integer;//provjerava jesu li skroz isti stringovi
 begin
 areEqual:=true;
   for i:=0 to Length do
@@ -19,7 +19,7 @@ areEqual:=true;
 end;
 
 function areEqual2(var str1, str2:array of char;length1, ind:integer):boolean;
-var i,j:integer;
+var i,j:integer;//provjerava je li manji string jednak dijelu drugog
 begin
   areEqual2:= true;
   j:=0;
